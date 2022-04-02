@@ -27,6 +27,11 @@ body {
     border: 1px solid red;
     transition: 1s ease;
   }
-  body  a > img:hover {
+  body a > img:hover {
     border: 4px dotted orange;
   }
+em{
+    font-style: normal;
+    text-decoration: solid;
+    text-shadow: 5px black;
+}
