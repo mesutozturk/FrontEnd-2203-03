@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: darkgray;
+  }
+  a {
+    color: black;
+      text-decoration: none;
+  }
+  a:visited {
+      color: red;
+  }
+  a:hover {
+      color: orange;
+  }
+  p {
+    color: rgba(34, 10, 10, 0.8);
+    font-weight: 400;
+    background-color: burlywood;
+    border: 4px solid black;
+    padding: 0 10px 0 10px;
+    margin-top: 25px;
+    border-radius: 0 10px 0 10px;
+  }
+
+  body  a > img {
+    border: 1px solid red;
+    transition: 1s ease;
+  }
+  body  a > img:hover {
+    border: 4px dotted orange;
+  }
