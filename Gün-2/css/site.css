@@ -18,3 +18,23 @@ body{
     background-repeat: repeat;
     padding: 10px 10px 0 10px;
 }
+
+.img-with-text{
+    overflow: hidden;
+    position: relative;
+}
+.img-bg > img {
+    opacity: 0.8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.img-text{
+    padding: 15px 5px 5px 15px;
+    position: relative;
+    font-weight: 700;
+    color:royalblue;
+}
