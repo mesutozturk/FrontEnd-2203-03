@@ -38,3 +38,33 @@ body{
     font-weight: 700;
     color:royalblue;
 }
+
+table, th, td {
+    color: black;
+    /* border:2px solid red; */
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:nth-child(odd) {
+    background-color: #f2f2f281;
+} */
+
+/* td:nth-child(even), th:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td:nth-child(odd), th:nth-child(odd) {
+    background-color: #f2f2f281;
+} */
+
+tr {
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #02c;
+}
+tr:hover {
+    background-color: #67eef3a2;
+}
