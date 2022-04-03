@@ -26,6 +26,7 @@ body {
   body  a > img {
     border: 1px solid red;
     transition: 1s ease;
+    margin-left: -5px;
   }
   body a > img:hover {
     border: 4px dotted orange;
