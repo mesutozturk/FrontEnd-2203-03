@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formlar</title>
+  </head>
+  <body>
+    <form action="" method="get" autocomplete="off">
+        <fieldset>
+        <legend>Kişi bilgileri</legend>
+      <table>
+        <tr>
+          <td>
+            <label for="txt-ad">Ad:</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              id="txt-ad"
+              placeholder="Lütfen Adınızı giriniz"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="txt-soyad">Soyad:</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              id="txt-soyad"
+              placeholder="Lütfen Soyadınızı giriniz"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+            <td>
+              <label for="txt-email">Email:</label>
+            </td>
+            <td>
+              <input
+                type="email"
+                id="txt-email"
+                placeholder="E Mail adresinizi giriniz"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="txt-password">Email:</label>
+            </td>
+            <td>
+              <input
+                type="password"
+                id="txt-password"
+                placeholder="Şifre"
+                required
+                maxlength="16"
+                minlength="6"
+              />
+            </td>
+          </tr>
+        <tr>
+          <td>
+            <label for="meslekler">Meslek:</label>
+          </td>
+          <td>
+            <select id="meslekler" size="5" multiple>
+              <option value="0">Lütfen Seçiniz</option>
+              <option value="1">Bilgisayar Müh</option>
+              <option value="2">Makine Müh.</option>
+              <option value="3" selected>Doktor</option>
+              <option value="4">Kabzımal</option>
+              <option value="5">Kasap</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="txt-falan">Falan</label>
+            </td>
+            <td>
+               <input type="text" name="falan" id="txt-falan" value="Bu alanı ellemeyiniz" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="reset" value="Reset">
+            </td>
+            <td>
+                <input type="submit" value="Kaydet">
+            </td>
+        </tr>
+    </fieldset>
+      </table>
+    </form>
+  </body>
+</html>
