@@ -23,6 +23,20 @@ function listeleTablo() {
     var table = document.getElementById("sinif-listesi");
     table.innerHTML = "";
 
+    var thead = document.createElement("thead");
+    var tr = document.createElement("tr");
+    var th1 = document.createElement("th");
+    var th2 = document.createElement("th");
+    var th3 = document.createElement("th");
+    th1.innerHTML = "Sıra";
+    th2.innerHTML = "Ad";
+    th3.innerHTML = "Soyad";
+    tr.appendChild(th1);
+    tr.appendChild(th2);
+    tr.appendChild(th3);
+    thead.appendChild(tr);
+    table.appendChild(thead);
+
     for (var i = 0; i < liste.length; i++) {
         var item = liste[i];
         var tr = document.createElement("tr");
