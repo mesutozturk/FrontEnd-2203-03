@@ -3,6 +3,10 @@ var liste = [];
 function ekle() {
     var ad = document.getElementById("txtAd").value;
     var soyad = document.getElementById("txtSoyad").value;
+    if (ad == "" || soyad == "") {
+        alert("Lütfen ad ve soyad giriniz.");
+        return;
+    }
     var kisi = {
         ad: ad,
         soyad: soyad,
