@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+  </head>
+  <body>
+    <div class="input-container">
+      <input type="range" min="0" max="255" value="123" id="in-red" /><br/>
+      <input type="range" min="0" max="255" value="123" id="in-green" /><br/>
+      <input type="range" min="0" max="255" value="123" id="in-blue" /><br/>
+    </div>
+    <div id="dv-color">12345</div>
+    <style>
+      #dv-color {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(123, 123, 123);
+        text-align: center; /* ortada */
+        line-height: 200px; /* yükseklik */
+        font-size: 2.4em; /* font boyutu */
+      }
+      .input-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      .input-container>input {
+        width: 200px;
+      }
+    </style>
+    <script src="js/slider.js"></script>
+  </body>
+</html>
