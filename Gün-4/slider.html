@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slider</title>
   </head>
-  <body>
+  <body onload="changeColor()">
     <div class="input-container">
       <input type="range" min="0" max="255" value="123" id="in-red" onchange="changeColor()"/><br/>
       <input type="range" min="0" max="255" value="123" id="in-green" onchange="changeColor()"/><br/>
@@ -20,7 +20,7 @@
         background-color: rgb(123, 123, 123);
         text-align: center; /* ortada */
         line-height: 200px; /* yükseklik */
-        font-size: 2.4em; /* font boyutu */
+        font-size: 1.4em; /* font boyutu */
       }
       .input-container {
         display: flex;
