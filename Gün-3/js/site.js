@@ -8,6 +8,7 @@ var degisken1 = "Merhaba Dünya"; //String
 degisken1 = 10; //Number
 degisken1 = 10.5; //Number
 degisken1 = true; //Boolean
+degisken1 = [];
 
 degisken1 = [1, 2, 3]; //Object (Array)
 degisken1[3] = 4;
