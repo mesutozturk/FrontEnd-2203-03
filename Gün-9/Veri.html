@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Büyük ve küçük sayılar bilisimsel veya üstsel gösterimle yazılabilir.
+        var x = 1453e5;   // 145300000
+        var y = 1453e-5;  // 0.01453
+        alert(x);
+      </script>
+
+<script>
+    //Dizi veri türü
+    //JavaScript dizi veri türü birden fazla elemandan oluşmuş veri topluluğudur.
+    //Dizi veri türü köşeli parantezle tanımlanır ve her elemanı virgülle ayrılarak yazılır.
+    //Dizi veri türünün ilk elemanı 0 ile başlar yani ilk elemana ismim[0], ikinci elemana ismim[1] ile ulaşırız
+    var ismim = ["Yusuf", "Sefa", "SEZER"];
+    alert(ismim[1]);
+  </script>
+
+  <script>
+      //Nesne veri türü
+      //JavaScript nesne veri türü isim:değer çifti olarak süslü parantezle tanımlanır ve her eleman virgülle ayrılarak yazılır.
+      //Örnekte bilgiler isimli ismim, soyIsmim ve kilo isminde 3 özellik içeren nesne veri türünde değişken tanımlanmıştır.
+    var bilgiler = {
+        ismim: "Yusuf",
+        soyIsmim: "SEZER",
+        kilo: 78
+    };
+    alert(bilgiler.ismim + "" + bilgiler.soyIsmim + "" + bilgiler.kilo);
+  </script>
+
+<script>
+    //Değişken türü öğrenme
+    //JavaScript sabit değer veya değişken değer veri türünü öğrenmek için typeof operatörü kullanılır.
+    //
+    var xSayisi = 15;
+    var ismim = "Yusuf";
+    alert(typeof xSayisi);  // number
+    alert(typeof ismim);    // string
+  </script>
+
+<script>
+    alert(typeof "Yusuf");  // string
+    alert(typeof 3.14);     // number
+    alert(typeof true);     // boolean
+    alert(typeof false);    // boolean
+  </script>
+
+<script>
+    //JavaScript typeof operatörü dizi veri türünü (array) nesne veri türü (object) olarak verir. JavaScript dizi veri türünü, nesne veri türü olarak tanımlamıştır.
+    alert(typeof [1,2,3,4]);                 // object
+    alert(typeof {ismim:"Yusuf", kilo:78});  // object
+    alert(typeof function fonk(){});         // function
+  </script>
+
+<script>
+    //Boş değişken. Boş değişken, tanımsız veri türünden farklıdır.Boş bir değişken bir veri türüne ve bir değere sahiptir.
+
+    var x = "";  // değişken değeri   ve veri türü string
+    alert(x);
+  </script>
+
+<script>
+    //Boş veri türü
+    //JavaScript boş veri türü (null) içeriği boş olan nesne veri türüdür.
+    //JavaScript nesne veri türü olarak tanımlanmış değişkene boş veri türü (null) değeri verilerek içeriği boşaltılır.
+    //JavaScript nesne veri türü olarak tanımlanmış değişkene tanımsız veri türü (undefined) değeri verilerek de içeriği boşaltılır.
+    var bilgiler = {
+        ismim:"Yusuf",
+        soyIsmim:"SEZER",
+        kilo:78
+    };
+    // sonra açarak dene 
+    //bilgiler = null;
+    alert(bilgiler.ismim + "\n" + bilgiler.soyIsmim + "\n" + bilgiler.kilo);
+  </script>
+
+<script>
+    //Tanımsız ve boş veri türü farkı
+    //JavaScript tanımsız ve boş veri türü birbirine eşittir ancak birbirine denk değildir.
+    alert(typeof undefined);    // undefined
+    alert(typeof null);         // null
+    alert(null === undefined);  // false
+    alert(null == undefined);   // true
+  </script>
+
+<!-- boolean değer true ve false değer döner -->
+<p id="demo"></p>
+<script>
+let x = 5;
+let y = 5;
+let z = 6;
+
+document.getElementById("demo").innerHTML =
+(x == y) + "<br>" + (x == z);
+</script>
+
+<!-- JavaScript Dizileri
+JavaScript dizileri köşeli parantezlerle yazılır.
+
+Dizi öğeleri virgülle ayrılır.
+
+Aşağıdaki kod, cars üç öğe (araba adları) içeren adlı bir dizi bildirir (oluşturur): -->
+<p id="demo"></p>
+<script>
+const cars = ["Saab","Volvo","BMW"];
+
+document.getElementById("demo").innerHTML = cars[0];
+</script>
+</body>
+</html>

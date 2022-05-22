@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Fonksiyon oluşturma
+    Fonksiyon function anahtar kelimesi bir boşluk fonksyion adı ve parantez ile tanımlanır.
+    
+    Fonksiyon isimlerinde harf, rakam, alt çizgi ve dolar işareti olabilir. (değişken tanımlama kuralları ile aynı)
+    
+    Birden fazla parametre parantez içerisinde virgülle ayrılır. (parametre1, parametre2, parametre3, … )
+    
+    Fonksiyon kodları süslü parantez { . . . } içerisine yazılır. -->
+    
+    <script>
+    function fonksiyonAdi(parametre1, parametre2) {
+      // fonksiyon kodları
+    }
+    </script> 
+    <!-- Fonksiyon çağırma
+    JavaScript ile yazılmış fonksiyon kodlarının çalışması için fonksiyon çağırma veya fonksiyon çalıştırma işleminin yapılması gerekir.
+    
+    JavaScript fonksiyon çalıştırmanın yolları;
+    
+    Bir olay meydana geldiğinde – kullanıcı HTML nesnesine tıkladığında -->
+    
+    <button onclick="alert('Merhaba JavaScript');">Merhaba</button>
+    <!-- Fonksiyon çağırma işlemi yapıldığında -->
+    
+    <script>
+    function uyari(mesaj) {
+      alert(mesaj);
+    }
+    uyari("Merhaba");
+    </script>
+
+    <!-- Otamatik – fonksiyon içinde fonksiyon çağırma gibi -->
+    
+    <script>
+    function uyari(mesaj) {
+      alert(mesaj);
+      //uyari(mesaj);
+    }
+    uyari("Selam");
+    </script>
+
+<!-- Fonksiyon değer döndürme
+JavaScipt fonksiyon kodları return anahtar kelimesine geldiğinde çalışmayı durdurur.
+
+JavaScript fonksiyonun çağrıldığı yerden devam eder varsa kalan kodları işler.
+
+Fonksiyonlar return anahtar kelimesi ile değer döndürür. -->
+
+<script>
+  var sonuc;
+  function Topla(sayi1, sayi2) {
+    return sayi1 + sayi2;         // sayi1 ve sayi2 toplamını döndürür
+  }
+  sonuc = Topla(10, 5);
+  alert(sonuc);
+</script>
+<!-- Örnekte Topla isminde fonksiyon tanımlanmış ve sayi1 ile sayi2 değerlerinin toplamı değer döndürme ile döndürülmüştü -->
+
+<!-- Fonksiyon kullanımı
+JavaScript fonksiyon kullanımı ile bir defa kodu yazarak birden fazla kullanabiliriz.
+
+JavaScript fonksiyonlarına parametre ekleyerek farklı değerler için farklı sonuçlar elde edebiliriz. -->
+
+<!-- diğer haftaya bu örneklerden bakalım -->
+<script>
+  function celsiusCevir(fahrenhayt) {
+      return (5 / 9) * (fahrenhayt - 32);
+  }
+  alert(celsiusCevir(50));
+  alert(celsiusCevir(104));
+</script>
+<!-- Örnekte farklı değerleri parametre olarak alan ve hesaplama yapan celsiusCevir isimli fonksiyon tanımlanmıştır.
+
+Örnekte celsiusCevir(50) ile fonksiyon çağırma işlemi yapılmıştır. -->
+
+<script>
+    //Sadece fonksiyon ismi yazılırsa JavaScript fonksiyon kodlarını döndürecektir.
+    var sonuc;
+    function celsiusCevir(fahrenhayt) {
+        return (5 / 9) * (fahrenhayt - 32);
+    }
+    alert(celsiusCevir);
+  </script>
+
+<script>
+    //JavaScript fonksiyon sonuçlarını değişkenlere atanabilir.
+    var sonuc;
+    function celsiusCevir(fahrenhayt) {
+        return (5/9) * (fahrenhayt-32);
+    }
+    sonuc = celsiusCevir(50);
+    alert(sonuc);
+  </script>
+</body>
+</html>

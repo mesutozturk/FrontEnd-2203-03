@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- https://www.w3schools.com/js/js_objects.asp -->
+    <!-- Gerçek hayatta, araba bir nesnedir .
+
+Bir arabanın ağırlık ve renk gibi özellikleri ve çalıştırma ve durdurma gibi yöntemleri vardır: -->
+
+<script>
+    //Örnekte araba isimli değişkene tek değer (Fiat) atanmıştır.
+    var araba = "Fiat";
+document.getElementById("demo").innerHTML = araba;
+//alert(car);
+  </script>
+
+<script>
+//Örnekte araba isimli değişkene birden fazla değer (Fiat, 500, beyaz) atanmıştır.
+    const araba = {type:"Fiat", model:"500", color:"white"};
+    document.getElementById("demo").innerHTML = "The car type is " + araba.model;
+    </script>
+
+<!-- Değerler ad:değer çiftleri (iki nokta üst üste ile ayrılmış ad ve değer) olarak yazılır .
+
+Nesneleri const anahtar sözcüğüyle bildirmek yaygın bir uygulamadır . -->
+
+<p id="demo"></p>
+<script>
+//nesne oluştur
+const kisi = {firstName:"emin", lastName:"Doe", age:25, eyeColor:"blue"};
+
+// göster
+document.getElementById("demo").innerHTML =
+kisi.firstName + "  " + kisi.age + " yaşıında.";
+</script>
+
+<!-- Nesne Özelliklerine Erişim
+Nesne özelliklerine iki şekilde erişebilirsiniz:
+
+objectName.propertyName
+veya
+
+objectName["propertyName"] -->
+<p id="demo"></p>
+
+<script>
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id     :  5566
+};
+document.getElementById("demo").innerHTML =
+person.firstName + " " + person.lastName;
+</script>
+
+<!-- alertle gösterme -->
+<!-- <script>
+    var bilgiler = {
+        ismim:"Yusuf",
+        soyIsmim:"SEZER",
+        kilo:78
+    };
+    alert(bilgiler.ismim);
+  </script> -->
+
+  <p id="demo"></p>
+
+<script>
+const person2 = {
+  firstName: "Wissen",
+  lastName : "Akademie",
+  id     :  5566
+};
+
+document.getElementById("demo").innerHTML =
+person2["firstName"] + " " + person2["lastName"];
+</script>
+
+<!-- <script>
+    //2.yöntem
+    var bilgiler = {
+        ismim:"Yusuf",
+        soyIsmim:"SEZER",
+        kilo:78
+    };
+    alert(bilgiler["ismim"]);
+  </script> -->
+
+
+  <!-- Nesne Yöntemlerine Erişim
+Aşağıdaki sözdizimi ile bir nesne yöntemine erişirsiniz:
+
+objectName.methodName() -->
+
+  <p id="demo"></p>
+<script>
+// Create an object:
+const person3 = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person3.fullName();
+</script>
+
+<script>
+    // () parantezleri olmadan bir yönteme erişirseniz , işlev tanımını döndürür :
+    // Create an object:
+    const person4 = {
+      firstName: "John",
+      lastName : "Doe",
+      id     : 5566,
+      fullName : function() {
+        return this.firstName + " " + this.lastName;
+      }
+    };
+    
+    // Display data from the object:
+    document.getElementById("demo").innerHTML = person4.fullName;
+    </script>
+
+<!-- https://www.w3schools.com/js/js_objects.asp
+
+https://www.yusufsezer.com.tr/javascript-nesneler/ -->
+</body>
+</html>
