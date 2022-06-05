@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    //1.ÖRNEK
+    //Yöntem sort(), bir diziyi alfabetik olarak sıralar:
+const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits1;
+fruits1.sort();
+document.getElementById("demo2").innerHTML = fruits1;
+</script>
+
+<!--  -->
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    //2.ÖRNEK
+    //Yöntem reverse(), bir dizideki öğeleri tersine çevirir.
+// Bir diziyi azalan düzende sıralamak için kullanabilirsiniz:
+// Create and display an array:
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits;
+// First sort the array
+fruits.sort();
+// Then reverse it:
+fruits.reverse();
+document.getElementById("demo2").innerHTML = fruits;
+</script>
+
+<!--  -->
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+//3.ÖRNEK
+//Varsayılan olarak, sort()işlev değerleri dizeler olarak sıralar .
+// Bu, dizeler için iyi çalışır ("Apple", "Muz" dan önce gelir).
+// Ancak sayılar dizge olarak sıralanırsa, "25", "100"den büyüktür, çünkü "2", "1"den büyüktür.
+// Bu nedenle, sort()sayılar sıralanırken yöntem yanlış sonuç verecektir.
+// Bunu bir karşılaştırma işlevi sağlayarak düzeltebilirsiniz :
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo1").innerHTML = points;  
+points.sort(function(a, b){return a - b});
+document.getElementById("demo2").innerHTML = points;
+</script>
+
+<!--  -->
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    //4.ÖRNEK
+    //Azalan bir diziyi sıralamak için aynı numarayı kullanın:
+const points2 = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo1").innerHTML = points2;
+
+points2.sort(function(a, b){return b - a});
+document.getElementById("demo2").innerHTML = points2;
+</script>
+<!--  -->
+
+<!-- Karşılaştırma İşlevi
+Karşılaştırma işlevinin amacı, alternatif bir sıralama düzeni tanımlamaktır.
+Karşılaştırma işlevi, bağımsız değişkenlere bağlı olarak negatif, sıfır veya pozitif bir değer döndürmelidir:
+function(a, b){return a - b}
+İşlev iki değeri karşılaştırdığında , sort()değerleri karşılaştırma işlevine gönderir ve değerleri döndürülen (negatif, sıfır, pozitif) değere göre sıralar.
+Sonuç negatif aise önce sıralanır b.
+Sonuç pozitif bise önce sıralanır a.
+Sonuç 0 ise, iki değerin sıralama düzeninde herhangi bir değişiklik yapılmaz.
+Örnek:
+Karşılaştırma işlevi, dizideki tüm değerleri, aynı anda iki değeri karşılaştırır (a, b).
+40 ve 100'ü karşılaştırırken, sort()yöntem karşılaştırma işlevini(40, 100) çağırır.
+İşlev 40 - 100 hesaplar (a - b)ve sonuç negatif (-60) olduğundan, sıralama işlevi 40'ı 100'den küçük bir değer olarak sıralar.
+Sayısal ve alfabetik olarak sıralamayı denemek için bu kod parçacığını kullanabilirsiniz: -->
+
+<button onclick="myFunction1()">Alfabetik sıralama</button>
+<button onclick="myFunction2()">Sayısal olarak sırala</button>
+<p id="demo"></p>
+<script>
+    //5.ÖRNEK
+    //Sayısal ve alfabetik olarak sıralamayı denemek için bu kod parçacığını kullanabilirsiniz
+const points3 = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo").innerHTML = points3;  
+function myFunction1() {
+  points3.sort();
+  document.getElementById("demo").innerHTML = points3;
+}
+function myFunction2() {
+  points3.sort(function(a, b){return a - b});
+  document.getElementById("demo").innerHTML = points3;
+}
+</script>
+
+<!--  -->
+<button onclick="myFunction()">Tıkla Bakalım</button>
+<p id="demo"></p>
+<script>
+    //6.ÖRNEK
+    //Bir Diziyi Rastgele Sırada Sıralama
+const points4 = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo").innerHTML = points4;  
+function myFunction() {
+  points4.sort(function(a, b){return 0.5 - Math.random()});
+  document.getElementById("demo").innerHTML = points4;
+}
+</script>
+
+<!--  -->
+<script>
+    //7.ÖRNEK
+    //Bir dizideki maksimum veya minimum değeri bulmak için yerleşik işlevler yoktur.
+// Ancak, bir diziyi sıraladıktan sonra, en yüksek ve en düşük değerleri elde etmek için dizini kullanabilirsiniz.
+// Artan sıralama:
+    const points5 = [40, 100, 1, 5, 25, 10];
+    points5.sort(function(a, b){return a-b});
+    document.getElementById("demo").innerHTML = points5[0];
+    </script>
+
+    <!--  -->
+    <script>
+          //8.ÖRNEK
+        //Azalan sıralama:
+        const points6 = [40, 100, 1, 5, 25, 10];
+        points6.sort(function(a, b){return b-a});
+        document.getElementById("demo").innerHTML = points6[0];
+        </script>
+
+<!--  -->
+<!-- Yalnızca en yüksek (veya en düşük) değeri bulmak istiyorsanız, tüm diziyi sıralamak çok verimsiz bir yöntemdir. -->
+<script>
+      //9.ÖRNEK
+      //Math.max.applyBir dizideki en yüksek sayıyı bulmak için kullanabilirsiniz :
+    const points7 = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demo").innerHTML = myArrayMax(points7);
+    
+    function myArrayMax(arr) {
+      return Math.max.apply(null, arr);
+    }
+    </script>
+<!-- Math.max.apply(null, [1, 2, 3])eşdeğerdir Math.max(1, 2, 3) -->
+    <!--  -->
+    <script>
+         //10.ÖRNEK
+         //Math.min.applyBir dizideki en düşük sayıyı bulmak için kullanabilirsiniz :
+         //Math.min.apply(null, [1, 2, 3])eşdeğerdir Math.min(1, 2, 3).
+        const points8 = [40, 100, 1, 5, 25, 10];
+        document.getElementById("demo").innerHTML = myArrayMin(points8);
+        
+        function myArrayMin(arr) {
+          return Math.min.apply(null, arr);
+        }
+        </script>
+
+<!--  -->
+<script>
+     //11.ÖRNEK
+     //Min / Maks JavaScript Yöntemlerim
+// En hızlı çözüm, "ev yapımı" bir yöntem kullanmaktır.
+// Bu işlev, her değeri bulunan en yüksek değerle karşılaştıran bir dizide döner
+    const points9 = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demo").innerHTML = myArrayMax(points9);
+    
+    function myArrayMax(arr) {
+      let len = arr.length;
+      let max = -Infinity;
+      while (len--) {
+        if (arr[len] > max) {
+          max = arr[len];
+        }
+      }
+      return max;
+    }
+    </script>
+<!--  -->
+<script>
+    //12.ÖRNEK
+    //Bu işlev, her değeri bulunan en düşük değerle karşılaştıran bir dizide döner:
+    const points10 = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demo").innerHTML = myArrayMin(points10);
+    function myArrayMin(arr) {
+      let len = arr.length;
+      let min = Infinity;
+      while (len--) {
+        if (arr[len] < min) {
+          min = arr[len];
+        }
+      }
+      return min;
+    }
+    </script>
+
+    <!--  -->
+
+    <p id="demo"></p>
+<script>
+    //13.ÖRNEK
+    //Nesneler farklı veri türlerinin özelliklerine sahip olsa bile sort(), diziyi sıralamak için yöntem kullanılabilir.
+
+// Çözüm, özellik değerlerini karşılaştırmak için bir karşılaştırma işlevi yazmaktır:
+const cars = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];
+
+displayCars();
+
+cars.sort(function(a, b){return a.year - b.year});
+displayCars();
+
+function displayCars() {
+  document.getElementById("demo").innerHTML =
+  cars[0].type + " " + cars[0].year + "<br>" +
+  cars[1].type + " " + cars[1].year + "<br>" +
+  cars[2].type + " " + cars[2].year;
+}
+</script>
+
+<!--  -->
+<button onclick="myFunction()">Sort</button>
+<p id="demo"></p>
+
+<script>
+    //14.ÖRNEK
+    //Dize özelliklerini karşılaştırmak biraz daha karmaşıktır:
+const cars2 = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];
+
+displayCars();
+
+function myFunction() {
+  cars2.sort(function(a, b){
+    let x = a.type.toLowerCase();
+    let y = b.type.toLowerCase();
+    if (x < y) {return -1;}
+    if (x > y) {return 1;}
+    return 0;
+  });
+  displayCars();
+}
+
+function displayCars() {
+  document.getElementById("demo").innerHTML =
+  cars2[0].type + " " + cars2[0].year + "<br>" +
+  cars2[1].type + " " + cars2[1].year + "<br>" +
+  cars2[2].type + " " + cars2[2].year;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+<script>
+    //1.ÖRNEK
+    //JavaScript yöntemi toString(), bir diziyi (virgülle ayrılmış) dizi değerleri dizisine dönüştürür.
+const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits1.toString();
+</script>
+
+<!-- ---- -->
+<p id="demo"></p>
+<script>
+    //2.ÖRNEK
+    //Yöntem join()ayrıca tüm dizi öğelerini bir dizgede birleştirir.
+// Tıpkı gibi davranır toString(), ancak ek olarak ayırıcıyı belirtebilirsiniz:
+const fruits2 = ["1", "2", "3", "4"];
+document.getElementById("demo").innerHTML = fruits2.join(" * ");
+</script>
+
+<!--  -->
+<!-- Popping and Pushing -->
+<!-- JavaScript Array pop() -->
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+    //3.ÖRNEK
+    //Yöntem pop(), dizideki son öğeyi kaldırır:
+const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits3;
+fruits3.pop();
+document.getElementById("demo2").innerHTML = fruits3;
+</script>
+
+<!--  -->
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+    //4.ÖRNEK
+    //Yöntem pop(), "dışarı atılan" değeri döndürür:
+const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits4.pop();
+document.getElementById("demo2").innerHTML = fruits4;
+</script>
+
+<!--  -->
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    //5.ÖRNEK
+    //Yöntem push(), bir diziye yeni bir öğe ekler (sonda):
+const fruits5 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits5;
+fruits5.push("Kiwi");
+document.getElementById("demo2").innerHTML = fruits5;
+</script>
+
+<!--  -->
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    //6.ÖRNEK
+    //Yöntem push(), yeni dizi uzunluğunu döndürür:
+const fruits6 = ["Banana", "Orange", "Apple", "Mango"];
+
+document.getElementById("demo1").innerHTML = fruits6.push("Kiwi");
+document.getElementById("demo2").innerHTML = fruits6;
+</script>
+
+<!--  -->
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    //7.ÖRNEK
+    //Yöntem shift(), ilk dizi öğesini kaldırır ve diğer tüm öğeleri daha düşük bir dizine "kaydırır".
+const fruits7 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits7;
+fruits7.shift();
+document.getElementById("demo2").innerHTML = fruits7;
+</script>
+
+<!--  -->
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+    //8.ÖRNEK
+    //Yöntem shift(), "dışarı kaydırılan" değeri döndürür:
+const fruits8 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits8.shift();
+document.getElementById("demo2").innerHTML = fruits8;
+</script>
+
+<!--  -->
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    //9.ÖRNEK
+    //Yöntem unshift(), bir diziye (başlangıçta) yeni bir öğe ekler ve eski öğeleri "değiştirir":
+const fruits9 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits9;
+fruits9.unshift("Lemon");
+document.getElementById("demo2").innerHTML = fruits9;
+</script>
+
+<!--  -->
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+    //10.ÖRNEK
+    //1.elemanı değişitirir
+const fruits10 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits10;
+fruits10[0] = "Kiwi";
+document.getElementById("demo2").innerHTML = fruits10;
+</script>
+<!--  -->
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    //11.örnek
+    //Özellik length, bir diziye yeni bir öğe eklemek için kolay bir yol sağlar:
+const fruits11 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits11;
+fruits11[fruits11.length] = "Kiwi";
+document.getElementById("demo2").innerHTML = fruits11;
+</script>
+
+<!--  -->
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    //12.ÖRNEK
+    //Dizi elemanları JavaScript operatörü kullanılarak silinebilir delete.
+// Dizideki deleteyaprak undefineddeliklerinin kullanılması.
+const fruits12 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML =
+"The first fruit is: " + fruits12[0];
+delete fruits12[0];
+document.getElementById("demo2").innerHTML =
+"The first fruit is: " + fruits12[0];
+</script>
+
+<!--  -->
+<p id="demo"></p>
+
+<script>
+    //13.ÖRNEK
+    //Yöntem concat(), mevcut dizileri birleştirerek (birleştirerek) yeni bir dizi oluşturur:
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+const myChildren = myGirls.concat(myBoys);
+document.getElementById("demo").innerHTML = myChildren;
+</script>
+
+<!--  -->
+<p id="demo"></p>
+
+<script>
+    //14.ÖRNEK
+    //(Üç Diziyi Birleştirme)
+const array1 = ["Cecilie", "Lone"];
+const array2 = ["Emil", "Tobias", "Linus"];
+const array3 = ["Robin", "Morgan"];
+
+const myChildren1 = array1.concat(array2, array3); 
+document.getElementById("demo").innerHTML = myChildren1;
+</script>
+
+<!--  -->
+<p id="demo"></p>
+
+<script>
+    //15.ÖRNEK
+    //(Diziyi Değerlerle Birleştirme)
+const myArray = ["Emil", "Tobias", "Linus"];
+const myChildren2 = myArray.concat("Peter"); 
+document.getElementById("demo").innerHTML = myChildren2;
+</script>
+
+<!--  -->
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+    //16.ÖRNEK
+    //Yöntem splice(), bir diziye yeni öğeler eklemek için kullanılabilir:
+//     İlk parametre (2), yeni öğelerin eklenmesi (eklenmesi) gereken konumu tanımlar.
+// İkinci parametre (0), kaç öğenin kaldırılması gerektiğini tanımlar .
+// Geri kalan parametreler ("Limon" , "Kivi") eklenecek yeni öğeleri tanımlar .
+
+const fruits16 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits16;
+
+fruits16.splice(2, 0, "Lemon", "Kiwi");
+document.getElementById("demo2").innerHTML = fruits16;
+</script>
+
+<!--  -->
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<script>
+    //17.ÖRNEK
+    //Yöntem splice(), silinen öğeleri içeren bir dizi döndürür:
+    //3 FARKLI 1.ilk hali,2.ci eklenen, 3.sılınen döndü
+const fruits17 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = "Original Array:<br> " + fruits17;
+let removed = fruits17.splice(2, 2, "Lemon", "Kiwi"); 
+document.getElementById("demo2").innerHTML = "New Array:<br>" + fruits17;
+document.getElementById("demo3").innerHTML = "Removed Items:<br> " + removed; 
+</script>
+
+<!--  -->
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    //18.örnek
+    //İlk parametre (0), yeni öğelerin eklenmesi (birleştirilmesi) gereken konumu tanımlar .
+
+// İkinci parametre (1), kaç öğenin kaldırılması gerektiğini tanımlar .
+
+// Parametrelerin geri kalanı atlanır. Yeni unsurlar eklenmeyecektir.
+const fruits18 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits18;
+fruits18.splice(0, 1);
+document.getElementById("demo2").innerHTML = fruits18;
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+   //19.örnek
+   //Yöntem slice(), bir dizinin bir parçasını yeni bir diziye dilimler.
+// Bu örnek, dizi öğesi 1'den ("Turuncu") başlayarak bir dizinin bir bölümünü dilimler halinde çıkarır:
+const fruits19 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits19.slice(1);
+document.getElementById("demo").innerHTML = fruits19 + "<br><br>" + citrus;
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+    //20.ÖRNEK
+    //Bu örnek, dizi öğesi 3'ten ("Apple") başlayarak bir dizinin bir bölümünü dilimler:
+const fruits20 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus1 = fruits20.slice(3);
+document.getElementById("demo").innerHTML = fruits20 + "<br><br>" + citrus1;
+</script>
+
+<!--  -->
+
+<p id="demo"></p>
+<script>
+    //21.ÖRNEK
+    //JavaScript, ilkel bir değer beklendiğinde bir diziyi otomatik olarak virgülle ayrılmış bir dizeye dönüştürür.
+// Bir dizi çıktısını almaya çalıştığınızda bu her zaman böyledir.
+// Bu iki örnek aynı sonucu verecektir:
+const fruits21 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits21.toString();
+</script>
+
+
+<!-- BU 2 ÖRNEK AYNI ŞEY YAPAR  -->
+<p id="demo"></p>
+<script>
+const fruits22 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits22;
+</script>
+</body>
+</html>

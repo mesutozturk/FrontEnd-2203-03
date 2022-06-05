@@ -92,7 +92,8 @@ document.getElementById("demo").innerHTML = person[0];
 <script>
     //7.ÖRNEK
     //Nesneler , "üyelerine" erişmek için adları kullanır. Bu örnekte, person.firstName John'u döndürür:
-const person1 = {firstName:"John", lastName:"Doe", age:46};
+const person1 = 
+{firstName:"John", lastName:"Doe", age:46};
 document.getElementById("demo").innerHTML = person1.firstName;
 </script>
 
@@ -120,7 +121,7 @@ document.getElementById("demo").innerHTML = fruits1[0];
     //10.ÖRNEK
     //Son Dizi Öğesine Erişim
 var fruits2 = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("demo").innerHTML = fruit2[fruits.length-1];
+document.getElementById("demo").innerHTML = fruit2[fruits2.length-1];
 </script>
 
 <!--  -->
@@ -130,14 +131,16 @@ document.getElementById("demo").innerHTML = fruit2[fruits.length-1];
     //Bir dizide dolaşmanın bir yolu, bir fordöngü kullanmaktır:
 const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
 let fLen = fruits3.length;
-let text = "<ul>";
+let text = " ";
 for (let i = 0; i < fLen; i++) {
-  text += "<li>" + fruits3[i] + "</li>";
+  text += "<li>" + fruits3[i] + " ";
 }
 text += "</ul>";
 document.getElementById("demo").innerHTML = text;
 </script>
 
+
+<!-- //05.06.2022 burdan devam edecez -->
 <!--  -->
 <p id="demo"></p>
 <script>

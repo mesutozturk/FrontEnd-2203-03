@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+<script>
+    //1.ÖRNEK
+    //Her biri için JavaScript Dizisi()
+// Yöntem forEach(), her dizi öğesi için bir işlevi (geri çağırma işlevi) bir kez çağırır.
+const numbers = [45, 4, 9, 16, 25];
+let txt = "";
+numbers.forEach(myFunction);
+document.getElementById("demo").innerHTML = txt;
+function myFunction(value, index, array) {
+  txt += value + "<br>"; 
+}
+</script>
+<!--  -->
+
+<p id="demo"></p>
+<script>
+    //2.ÖRNEK
+    //İşlevin 3 bağımsız değişken aldığını unutmayın:
+// öğe değeri
+// öğe dizini
+// Dizinin kendisi
+// Yukarıdaki örnek yalnızca value parametresini kullanır. Örnek şu şekilde yeniden yazılabilir:
+const numbers0 = [45, 4, 9, 16, 25];
+let txt2 = "";
+numbers0.forEach(myFunction);
+document.getElementById("demo").innerHTML = txt2;
+function myFunction(value) {
+  txt += value + "<br>"; 
+}
+</script>
+<!--  -->
+<p id="demo"></p>
+
+<script>
+    //3.ÖRNEK
+    //JavaScript Dizi haritası()
+// Yöntem map(), her dizi öğesinde bir işlev gerçekleştirerek yeni bir dizi oluşturur.
+
+// Yöntem map(), değerleri olmayan dizi öğeleri için işlevi yürütmez.
+
+// Yöntem map(), orijinal diziyi değiştirmez.
+
+// Bu örnek, her dizi değerini 2 ile çarpar:
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+document.getElementById("demo").innerHTML = numbers2;
+
+function myFunction(value, index, array) {
+  return value * 2;
+}
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+    //4.ÖRNEK
+    //İşlevin 3 bağımsız değişken aldığını unutmayın:
+// öğe değeri
+// öğe dizini
+// Dizinin kendisi
+// Geri arama işlevi yalnızca değer parametresini kullandığında, dizin ve dizi parametreleri atlanabilir:
+const numbers11 = [45, 4, 9, 16, 25];
+const numbers22 = numbers1.map(myFunction);
+document.getElementById("demo").innerHTML = numbers22;
+function myFunction(value) {
+  return value * 2;
+}
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+    //5.ÖRNEK
+    //Yöntem filter(), bir testi geçen dizi öğeleriyle yeni bir dizi oluşturur.
+
+// Bu örnek, değeri 18'den büyük olan öğelerden yeni bir dizi oluşturur:
+const numbers4 = [45, 4, 9, 16, 25];
+const over18 = numbers4.filter(myFunction);
+document.getElementById("demo").innerHTML = over18;
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+    //6.ÖRNEK
+    //İşlevin 3 bağımsız değişken aldığını unutmayın:
+
+// öğe değeri
+// öğe dizini
+// Dizinin kendisi
+// Yukarıdaki örnekte, geri arama işlevi dizin ve dizi parametrelerini kullanmaz, dolayısıyla bunlar atlanabilir:
+const numbers33 = [45, 4, 9, 16, 25];
+const over188 = numbers33.filter(myFunction);
+document.getElementById("demo").innerHTML = over188;
+function myFunction(value) {
+  return value > 18;
+}
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+    //7.ÖRNEK
+    //Yöntem reduce(), tek bir değer üretmek (azaltmak) için her dizi öğesinde bir işlev çalıştırır.
+// Yöntem reduce()dizide soldan sağa doğru çalışır. Ayrıca bkz reduceRight().
+// Yöntem reduce(), orijinal diziyi azaltmaz.
+// Bu örnek, bir dizideki tüm sayıların toplamını bulur:
+const numbers7 = [45, 4, 9, 16, 25];
+let sum = numbers7.reduce(myFunction);
+document.getElementById("demo").innerHTML = "The sum is " + sum;
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+    //8.ÖRNEK
+    //İşlevin 4 argüman aldığını unutmayın:
+// Toplam (başlangıç ​​değeri / önceden döndürülen değer)
+// öğe değeri
+// öğe dizini
+// Dizinin kendisi
+// Yukarıdaki örnek, dizin ve dizi parametrelerini kullanmaz. Şu şekilde yeniden yazılabilir:
+const numbers6 = [45, 4, 9, 16, 25];
+let sum6 = numbers6.reduce(myFunction);
+document.getElementById("demo").innerHTML = "The sum is " + sum6;
+function myFunction(total, value) {
+  return total + value;
+}
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+    //9.ÖRNEK
+    //Yöntem reduce()bir başlangıç ​​değeri kabul edebilir:
+const numbers9 = [45, 4, 9, 16, 25];
+let sum9 = numbers9.reduce(myFunction, 100);
+document.getElementById("demo").innerHTML = "The sum is " + sum9;
+function myFunction(total, value) {
+  return total + value;
+}
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+    //10.ÖRNEK
+    //Yöntem reduceRight(), tek bir değer üretmek (azaltmak) için her dizi öğesinde bir işlev çalıştırır.
+// Dizide reduceRight()sağdan sola işler. Ayrıca bkz reduce().
+// Yöntem reduceRight(), orijinal diziyi azaltmaz.
+// Bu örnek, bir dizideki tüm sayıların toplamını bulur:
+const numbers77 = [45, 4, 9, 16, 25];
+let sum77 = numbers77.reduceRight(myFunction);
+document.getElementById("demo").innerHTML = "The sum is " + sum77;
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+    //11.ÖRNEK
+    //İşlevin 4 argüman aldığını unutmayın:
+// Toplam (başlangıç ​​değeri / önceden döndürülen değer)
+// öğe değeri
+// öğe dizini
+// Dizinin kendisi
+// Yukarıdaki örnek, dizin ve dizi parametrelerini kullanmaz. Şu şekilde yeniden yazılabilir:
+const numbers88 = [45, 4, 9, 16, 25];
+let sum88 = numbers88.reduceRight(myFunction);
+document.getElementById("demo").innerHTML = "The sum is " + sum88;
+function myFunction(total, value) {
+  return total + value;
+}
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+     //12.ÖRNEK
+     //Yöntem every(), tüm dizi değerlerinin bir testi geçip geçmediğini kontrol eder.
+// Bu örnek, tüm dizi değerlerinin 18'den büyük olup olmadığını kontrol eder:
+ const numbers222 = [45, 4, 9, 16, 25];
+let allOver18 = numbers222.every(myFunction);
+document.getElementById("demo").innerHTML = "All over 18 is " + allOver18;
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+<!--  -->
+<p id="demo"></p>
+<script>
+    //13.ÖRNEK
+    //İşlevin 3 bağımsız değişken aldığını unutmayın:
+// öğe değeri
+// öğe dizini
+// Dizinin kendisi
+// Bir geri arama işlevi yalnızca ilk parametreyi (değeri) kullandığında, diğer parametreler atlanabilir:
+const numbers44 = [45, 4, 9, 16, 25];
+let allOver185 = numbers44.every(myFunction);
+document.getElementById("demo").innerHTML = "All over 18 is " + allOver185;
+function myFunction(value) {
+  return value > 18;
+}
+</script>
+<!--  -->
+<p id="demo"></p>
+<script>
+    //14.ÖRNEK
+    //JavaScript Dizi bazı()
+// Yöntem some(), bazı dizi değerlerinin bir testi geçip geçmediğini kontrol eder.
+
+// Bu örnek, bazı dizi değerlerinin 18'den büyük olup olmadığını kontrol eder:
+const numbers99 = [45, 4, 9, 16, 25];
+let someOver18 = numbers99.some(myFunction);
+document.getElementById("demo").innerHTML = "Some over 18 is " + someOver18;
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+      //15.ÖRNEK
+      //JavaScript Dizi indexOf()
+// Yöntem indexOf(), bir öğe değeri için bir dizi arar ve konumunu döndürür.
+// Not: İlk öğenin konumu 0, ikinci öğenin konumu 1'dir, vb.
+const fruits = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruits.indexOf("Apple") + 1;
+document.getElementById("demo").innerHTML = "Apple is found in position " + position;
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+       //16.ÖRNEK
+       //JavaScript Dizisi lastIndexOf()
+// Array.lastIndexOf()ile aynıdır Array.indexOf(), ancak belirtilen öğenin son oluşumunun konumunu döndürür.
+const fruits22 = ["Apple", "Orange", "Apple", "Mango"];
+let position22 = fruits22.lastIndexOf("Apple") + 1;
+document.getElementById("demo").innerHTML = "Apple is found in position " + position22;
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+    //17.ÖRNEK
+    //JavaScript Dizisi bul()
+// Yöntem find(), bir test işlevinden geçen ilk dizi öğesinin değerini döndürür.
+// Bu örnek, 18'den büyük olan ilk öğeyi bulur (değerini döndürür):
+const numbers444 = [4, 9, 16, 25, 29];
+let first = numbers444.find(myFunction);
+document.getElementById("demo").innerHTML = "First number over 18 is " + first;
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+     //18.ÖRNEK
+     //JavaScript Dizisi findIndex()
+// Yöntem findIndex(), bir test işlevinden geçen ilk dizi öğesinin dizinini döndürür.
+// Bu örnek, 18'den büyük olan ilk öğenin dizinini bulur:
+const numbers777 = [4, 9, 16, 25, 29];
+document.getElementById("demo").innerHTML = "First number over 18 has index " + numbers777.findIndex(myFunction);
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+<!--  -->
+<p id="demo"></p>
+<script>
+    //19.ÖRNEK
+    //JavaScript Dizisi.from()
+// Yöntem Array.from(), length özelliğine sahip herhangi bir nesneden veya yinelenebilir herhangi bir nesneden bir Array nesnesi döndürür.
+// const myArr = Array.from("ABCDEFG");
+document.getElementById("demo").innerHTML = myArr;
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+    //20.ÖRNEK
+    //JavaScript Dizi Anahtarları()
+// Yöntem Array.keys(), bir dizinin anahtarlarıyla birlikte bir Array Iterator nesnesi döndürür.
+//Dizinin anahtarlarını içeren bir Dizi Yineleyici nesnesi oluşturun:
+const fruits6 = ["Banana", "Orange", "Apple", "Mango"];
+const keys = fruits6.keys();
+let text = "";
+for (let x of keys) {
+  text += x + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+<!--  -->
+
+<p id="demo"></p>
+<script>
+      //21.ÖRNEK
+      //Bir Dizi Yineleyici oluşturun ve ardından anahtar/değer çiftlerini yineleyin:
+      //Yöntem entries(), anahtar/değer çiftleriyle bir Array Iterator nesnesi döndürür:
+
+// [0, "Muz"]
+// [1, "Portakal"]
+// [2, "Elma"]
+// [3, "Mango"]
+
+// Yöntem entries(), orijinal diziyi değiştirmez.
+const fruits23 = ["Banana", "Orange", "Apple", "Mango"];
+const f = fruits23.entries();
+for (let x of f) {
+  document.getElementById("demo").innerHTML += x + "<br>";
+}
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+    //22.ÖRNEK
+    //JavaScript Dizisi şunları içerir()
+// ECMAScript 2016 Array.includes(), dizilere tanıtıldı. Bu, bir dizide bir öğenin olup olmadığını kontrol etmemizi sağlar (indexOf'un aksine NaN dahil).
+//Array.includes(), NaN değerlerinin kontrol edilmesini sağlar. Array.indexOf()'un aksine.
+const fruits7 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits7.includes("Mango");
+</script>
+</body>
+</html>

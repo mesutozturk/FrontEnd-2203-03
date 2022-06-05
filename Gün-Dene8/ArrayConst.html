@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+<script>
+    //1.ÖRNEK
+    //2015'te JavaScript, önemli bir yeni anahtar kelimeyi tanıttı: const.
+    //Aşağıdakileri kullanarak dizileri bildirmek yaygın bir uygulama haline geldi const:
+const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars;
+
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+    //2.ÖRNEK
+    //İle bildirilen bir dizi constyeniden atanamaz:
+try {
+  const cars = ["Saab", "Volvo", "BMW"];
+  cars = ["Toyota", "Volvo", "Audi"];
+}
+catch (err) {
+  document.getElementById("demo").innerHTML = err;
+}
+</script>
+<!--  -->
+<p id="demo"></p>
+<script>
+    //3.ÖRNEK
+    //Sabit bir dizinin öğelerini değiştirebilirsiniz:
+// Create an Array:
+const cars2 = ["Saab", "Volvo", "BMW"];
+// Change an element:
+cars2[0] = "Toyota";
+// Add an element:
+cars2.push("Audi");
+// Display the Array:
+document.getElementById("demo").innerHTML = cars2; 
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+    //4.ÖRNEK
+    //İle bildirilen diziler varherhangi bir zamanda başlatılabilir.
+// Diziyi, bildirilmeden önce bile kullanabilirsiniz:
+cars3 = ["Saab", "Volvo", "BMW"];
+var cars3;
+document.getElementById("demo").innerHTML = cars3[0];
+</script>
+
+<!--  -->
+<p id="demo"></p>
+<script>
+    //5.ÖRNEK
+    //İle bildirilen bir dizi const, Blok Kapsamına sahiptir .
+
+// Bir blokta bildirilen bir dizi, bloğun dışında bildirilen bir dizi ile aynı değildir:
+const cars4 = ["Saab", "Volvo", "BMW"];
+// Here cars[0] is "Saab"
+{  
+  const cars4 = ["Toyota", "Volvo", "BMW"]; 
+  // Here cars[0] is "Toyota"
+}
+// Here cars[0] is "Saab"
+document.getElementById("demo").innerHTML = cars4[0];
+</script>
+
+<!--  -->
+<p id="demo"></p>
+
+<script>
+    //6.ÖRNEK
+    //İle bildirilen bir dizinin varblok kapsamı yoktur:
+var cars5 = ["Saab", "Volvo", "BMW"];
+// Here cars[0] is "Saab"
+{  
+  var cars5 = ["Toyota", "Volvo", "BMW"]; 
+  // Here cars[0] is "Toyota"
+}
+// Here cars[0] is "Toyota"
+document.getElementById("demo").innerHTML = cars5[0];
+</script>
+</body>
+</html>
