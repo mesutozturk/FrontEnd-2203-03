@@ -27,12 +27,99 @@ const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
 document.getElementById("demo").innerHTML = typeof fruits2;
 </script> -->
 
+<!-- ---- -->
+
+<!-- <p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    //5.ÖRNEK
+    //Yöntem push(), bir diziye yeni bir öğe ekler (sonda):
+const fruits5 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits5;
+fruits5.push("Kiwi");
+document.getElementById("demo2").innerHTML = fruits5;
+</script> -->
+
+
+<!-- <p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    //6.ÖRNEK
+    //Yöntem push(), yeni dizi uzunluğunu döndürür:
+const fruits6 = ["Banana", "Orange", "Apple", "Mango"];
+
+document.getElementById("demo1").innerHTML = fruits6.push("Kiwi");
+document.getElementById("demo2").innerHTML = fruits6;
+</script> -->
+
+<!-- <p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    //6.ÖRNEK
+    //Yöntem push(), yeni dizi uzunluğunu döndürür:
+const fruits6 = ["Banana", "Orange", "Apple", "Mango"];
+
+document.getElementById("demo1").innerHTML = fruits6.push("Kiwi");
+document.getElementById("demo2").innerHTML = fruits6;
+</script> -->
+
+<!-- <p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    //7.ÖRNEK
+    //Yöntem shift(), ilk dizi öğesini kaldırır ve diğer tüm öğeleri daha düşük bir dizine "kaydırır".
+const fruits7 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits7;
+fruits7.shift();
+document.getElementById("demo2").innerHTML = fruits7;
+</script> -->
+<!--  -->
+<!--  -->
+<!-- <p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    //11.örnek
+    //Özellik length, bir diziye yeni bir öğe eklemek için kolay bir yol sağlar:
+const fruits11 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits11;
+fruits11[fruits11.length-1] = "Kiwi";
+document.getElementById("demo2").innerHTML = fruits11;
+</script> -->
+
+<!-- <p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    //12.ÖRNEK
+    //Dizi elemanları JavaScript operatörü kullanılarak silinebilir delete.
+// Dizideki deleteyaprak undefineddeliklerinin kullanılması.
+const fruits12 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits12[1];
+delete fruits12[1];
+document.getElementById("demo2").innerHTML =
+"The first fruit is: " + fruits12[1];
+document.getElementById("demo2").innerHTML = fruits12;
+document.getElementById("demo2").innerHTML = fruits12;
+</script> -->
+
+<!-- <p id="demo"></p>
+
+<script>
+    //15.ÖRNEK
+    //(Diziyi Değerlerle Birleştirme)
+const myArray = ["Emil", "Tobias", "Linus"];
+const myChildren2 = myArray.concat("Peter"); 
+document.getElementById("demo").innerHTML = myChildren2;
+</script> -->
+
+
 <p id="demo"></p>
 <script>
-    //1.ÖRNEK
-    //JavaScript yöntemi toString(), bir diziyi (virgülle ayrılmış) dizi değerleri dizisine dönüştürür.
-const fruits1 = ["Banana", "Orange", "Apple", "Mango",1];
-document.getElementById("demo").innerHTML = fruits1.toString();
+   //19.örnek
+   //Yöntem slice(), bir dizinin bir parçasını yeni bir diziye dilimler.
+// Bu örnek, dizi öğesi 1'den ("Turuncu") başlayarak bir dizinin bir bölümünü dilimler halinde çıkarır:
+const fruits19 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits19.slice(3);
+document.getElementById("demo").innerHTML = fruits19 + "<br><br>" + citrus;
 </script>
 </body>
 </html>
