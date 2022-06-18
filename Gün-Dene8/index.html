@@ -24,16 +24,33 @@
     }
     </script>  -->
 
-</script>
-<!--  -->
+    <!--  -->
+  <!-- </script>
+
+  <p id="demo"></p>
+  <script>
+      //19.ÖRNEK
+      //JavaScript Dizisi.from()
+  // Yöntem Array.from(), length özelliğine sahip herhangi bir nesneden veya yinelenebilir herhangi bir nesneden bir Array nesnesi döndürür.
+  const myArr = Array.from("ABCDEFG");
+  document.getElementById("demo").innerHTML = myArr;
+  </script>
+</script> -->
+
 <p id="demo"></p>
 <script>
-const numbers44 = [45, 4, 9, 16, 25];
-let allOver185 = numbers44.every(myFunction);
-document.getElementById("demo").innerHTML = "Dönen sonuc : " + allOver185;
-function myFunction(value) {
-  return value > 18;
+    //20.ÖRNEK
+    //JavaScript Dizi Anahtarları()
+// Yöntem Array.keys(), bir dizinin anahtarlarıyla birlikte bir Array Iterator nesnesi döndürür.
+//Dizinin anahtarlarını içeren bir Dizi Yineleyici nesnesi oluşturun:
+const fruits6 = ["Banana", "Orange", "Apple", "Mango","emin"];
+const keys = fruits6.keys();
+let text = "";
+for (let x of keys) {
+  text += x + "<br>";
 }
+document.getElementById("demo").innerHTML = text;
 </script>
+
 </body>
 </html>

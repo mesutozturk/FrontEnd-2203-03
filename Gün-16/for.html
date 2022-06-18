@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arry1 = [1, 3, 4, 6, 5, 11, 12];
+let dizi = [6, 1, 8, 5, 11];
+let Arry = [6, 8, 4, 12];   
+
+// for (let i = 0; i < arry1.length; i++) {
+//     if(arry1[i] % 2 === 0) {
+//         document.getElementById('demo').innerHTML += arry1[i] + '<br>';
+//         // console.log(arry1[i]);
+//     }
+// }
+
+// for (let i = 0; i < arry1.length; i++) {
+//     for (let j = 0; j < arry2.length; j++) {
+//         if (arry1[i] === arry2[j]) {
+//             document.getElementById('demo').innerHTML += arry1[i] + '<br>';
+//         }
+//     }
+// }
+
+
+for (let i = 0; i < arry1.length; i++) {
+    for (let j = 0; j < dizi.length; j++) {
+        for (let k = 0; k < Arry.length; k++) {
+            if ((arry1[i] == dizi[j]) || (arry1[i] == Arry[k])) {
+                // document.getElementById('demo').innerHTML = arry1[i] + " " + dizi[j] + " " + Arry[k];
+                console.log(arry1[i]);
+            }
+        }
+    }
+}
+    </script>
+</body>
+</html>
