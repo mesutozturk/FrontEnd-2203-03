@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+<script>
+    //1.ÖRNEK 
+    // new Date()geçerli tarih ve saatle yeni bir tarih nesnesi oluşturur :
+const d = new Date();
+document.getElementById("demo").innerHTML = d;
+</script>
+<!--  -->
+<p id="demo"></p>
+<script>
+      //2.ÖRNEK 
+//       new Date(year, month, ...)belirtilen tarih ve saate sahip yeni bir tarih nesnesi oluşturur .
+// 7 sayı yılı, ayı, günü, saati, dakikayı, saniyeyi ve milisaniyeyi belirtir (bu sırayla):
+const d1 = new Date(2018, 11, 24, 10, 33, 30, 0);
+document.getElementById("demo").innerHTML = d1;
+</script>
+<!--  -->
+<p id="demo"></p>
+
+<script>
+    //3.ÖRNEK
+//     Not: JavaScript, 0 ile 11 arasındaki ayları sayar :
+// Ocak = 0 .
+// Aralık = 11 .
+// 11'den büyük bir ay belirtmek hataya neden olmaz, ancak sonraki yıla taşma ekler:
+const d2 = new Date(2018, 15, 24, 10, 33, 30, 0);
+document.getElementById("demo").innerHTML = d2;
+</script>
+<!--  -->
+<p id="demo"></p>
+<script>
+   // 4.ÖRNEK
+//    Ayı atlayamazsınız. Yalnızca bir parametre sağlarsanız, milisaniye olarak kabul edilecektir.
+const d3 = new Date(2018);
+document.getElementById("demo").innerHTML = d3;
+</script>
+<!--  -->
+<p id="demo"></p>
+<script>
+    // 5.ÖRNEK
+    // HTML'de bir tarih nesnesi görüntülediğinizde, toString()yöntemle otomatik olarak bir dizeye dönüştürülür.
+const d4 = new Date();
+document.getElementById("demo").innerHTML = d4.toString();
+</script>
+<!--  -->
+<p id="demo"></p>
+<script>
+     // 6.ÖRNEK
+    //  Yöntem toISOString(), ISO standart biçimini kullanarak bir Date nesnesini bir dizeye dönüştürür:
+const d5 = new Date();
+document.getElementById("demo").innerHTML = d5.toISOString();
+</script>
+<!--  -->
+
+</body>
+</html>

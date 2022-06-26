@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+<script>
+    //1.ÖRNEK
+    // Yöntem setFullYear(), bir tarih nesnesinin yılını ayarlar. Bu örnekte 2020'ye:
+const d1 = new Date();
+d1.setFullYear(2020);
+document.getElementById("demo").innerHTML = d1;
+</script>
+<!--  -->
+<p id="demo"></p>
+<script>
+    //2.ÖRNEK
+    // Yöntem setDate(), bir tarih nesnesinin (1-31) gününü ayarlar:
+const d2 = new Date();
+d.setDate(15);
+document.getElementById("demo").innerHTML = d2;
+</script>
+<!--  -->
+<p id="demo"></p>
+<script>
+    //3.ÖRNEK
+    // Yöntem ayrıca bir tarihe gün eklemeksetDate() için de kullanılabilir :
+const d3 = new Date();
+d3.setDate(d3.getDate() + 2);
+document.getElementById("demo").innerHTML = d3;
+</script>
+<!--  -->
+<p id="demo"></p>
+<script>
+    //4.ÖRNEK
+//     Tarihler kolayca karşılaştırılabilir.
+// Aşağıdaki örnek, bugünün tarihini 14 Ocak 2100 ile karşılaştırır:
+let text;
+const today = new Date();
+const someday = new Date();
+someday.setFullYear(2100, 0, 14);
+
+if (someday > today) {
+  text = "Bugün 14 ocak 2100 dan sonra.";
+} else {
+  text = "Bugün 14 ocak 2100 dan önce.";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+</body>
+</html>

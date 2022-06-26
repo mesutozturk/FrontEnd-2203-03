@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        //1.ÖRNEK
+//         JavaScript ISO Tarihleri
+// ISO 8601, tarih ve saatlerin temsili için uluslararası standarttır.
+// ISO 8601 sözdizimi (YYYY-AA-GG) da tercih edilen JavaScript tarih formatıdır:
+    const d1 = new Date("2015-03-25");
+    document.getElementById("demo").innerHTML = d1;
+    </script> 
+    <!--  -->
+    <p id="demo"></p>
+<script>
+      //2.ÖRNEK
+//       Tarih Girişi - Tarihleri ​​Ayrıştırma
+// Geçerli bir tarih dizginiz varsa, Date.parse()onu milisaniyeye dönüştürmek için yöntemi kullanabilirsiniz.
+// Date.parse()tarih ile 1 Ocak 1970 arasındaki milisaniye sayısını döndürür:
+ const msec = Date.parse("March 21, 2012");
+document.getElementById("demo").innerHTML = msec;
+</script>
+<!--  -->
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        //1.ÖRNEK
+//JavaScript'te ilk ay (Ocak) 0 aydır, bu nedenle Aralık ayı 11 sayısını döndürür.
+// Bir dizi ad kullanabilir getMonth()ve ayı bir ad olarak döndürebilirsiniz:
+    const months = ["OCAK","ŞUBAT","MART","NİSAN","MAYIS","HAZİRAN","TEMMUZ","AĞUSTOS","EYLÜL","EKİM","KASIM","ARALIK"];
+    const d1 = new Date();
+    let month = months[d1.getMonth()];
+    document.getElementById("demo").innerHTML = month;
+    </script>  
+    <!--  -->
+    <p id="demo"></p>
+<script>
+    //2.ÖRNEK
+//     getDate() Yöntemi
+// Yöntem getDate(), bir tarihin gününü bir sayı (1-31) olarak döndürür:
+const d2 = new Date();
+document.getElementById("demo").innerHTML = d2.getDate();
+</script>
+<!--  -->
+<p id="demo"></p>
+<script>
+    //3.ÖRNEK
+    // Yöntem getDay(), bir tarihin hafta içi gününü bir sayı (0-6) olarak döndürür:
+const d3 = new Date();
+document.getElementById("demo").innerHTML = d3.getDay();
+</script>
+<!--  -->
+<p id="demo"></p>
+
+<script>
+    //4.ÖRNEK
+//     JavaScript'te, dünyadaki bazı ülkeler haftanın ilk gününü "Pazartesi" olarak kabul etse bile, haftanın ilk günü (0) "Pazar" anlamına gelir.
+// Bir dizi ad kullanabilir getDay()ve haftanın gününü bir ad olarak döndürebilirsiniz:
+const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const d4 = new Date();
+let day = days[d4.getDay()];
+document.getElementById("demo").innerHTML = day;
+</script>
+<!--  -->
+</body>
+</html>
