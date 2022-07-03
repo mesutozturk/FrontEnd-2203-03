@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        // değişken - Her yineleme için bir sonraki özelliğin değeri değişkene atanır. Değişkenconst , letveya ile bildirilebilir var.
+    // yinelenebilir - Yinelenebilir özelliklere sahip bir nesne
+    let language = "JavaScript";
+    let text = "";
+    for (let x of language) {
+      text += x + "<br>";
+    }
+    
+    document.getElementById("demo").innerHTML = text;
+    
+    </script>
+    <!--  -->
+    <p id="demo"></p>
+    <script>
+        // 2.ÖRNEK
+        //Döngü , whilebelirtilen bir koşul doğru olduğu sürece bir kod bloğu boyunca döner.
+        //Aşağıdaki örnekte, (i) değişkeni 10'dan küçük olduğu sürece döngüdeki kod tekrar tekrar çalışacaktır:
+    let text1 = "";
+    let i = 0;
+    while (i < 10) {
+      text1 += "<br>Numara : " + i;
+      i++;
+    }
+    document.getElementById("demo").innerHTML = text1;
+    </script>
+    <!--  -->
+    <script>
+        // 3.ÖRNEK
+        // Döngü , do whilewhile döngüsünün bir çeşididir. Bu döngü, koşulun doğru olup olmadığını kontrol etmeden önce kod bloğunu bir kez çalıştıracak, ardından koşul doğru olduğu sürece döngüyü tekrarlayacaktır.
+        // Aşağıdaki örnek bir do whiledöngü kullanmaktadır. Kod bloğu koşul test edilmeden önce yürütüldüğünden, koşul yanlış olsa bile döngü her zaman en az bir kez yürütülür:
+        let text2 = ""
+        let i2 = 0;
+        
+        do {
+          text2 += "<br>The number is " + i2;
+          i2++;
+        }
+        while (i2 < 10);  
+        
+        document.getElementById("demo").innerHTML = text2;
+        </script>
+        <!--  -->
+        
+        <p id="demo"></p>
+    <script>
+        //4.ÖRNEK
+        // Bu break ifade aynı zamanda bir döngüden çıkmak için de kullanılabilir:
+        // Yukarıdaki örnekte break, döngü sayacı (i) 3 olduğunda ifade döngüyü bitirir ("döngüyü keser").
+        let text4 = "";
+        for (let i = 0; i < 10; i++) {
+          if (i === 3) { break; }
+          text4 += "The number is " + i + "<br>";
+        }
+        
+        document.getElementById("demo").innerHTML = text4;
+        </script>
+        <!--  -->
+        <p id="demo"></p>
+    
+    <script>
+        //5.ÖRNEK
+    //     Belirtilen continue bir koşul oluşursa, ifade bir yinelemeyi (döngüde) keser ve döngüdeki bir sonraki yinelemeyle devam eder.
+    // Bu örnek 3 değerini atlar:
+    let text5 = "";
+    for (let i = 0; i < 10; i++) {
+      if (i === 3) { continue; }
+      text5 += "The number is " + i + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text5;
+    </script>
+    <!--  -->
+    <p id="demo"></p>
+    <script>
+        //  //6.ÖRNEK
+        // Yapıcıya bir Dizi ileterek bir Harita oluşturabilirsiniz new Map():
+        // Şu yöntemle bir Haritaya öğeler ekleyebilirsiniz set():
+        // Yöntem set(), mevcut Harita değerlerini değiştirmek için de kullanılabilir:
+    // Create a Map
+    const fruits = new Map();
+    // Set Map Values
+    fruits.set("apples", 500);
+    fruits.set("bananas", 300);
+    fruits.set("oranges", 200);
+    
+    document.getElementById("demo").innerHTML = fruits.get("apples");
+    </script>
+    <!--  -->
+    <p id="demo"></p>
+    <script>
+        //7.ÖRNEK
+        // Yöntem get(), bir Haritadaki bir anahtarın değerini alır:
+    // Create a Map
+    const fruits2 = new Map([
+      ["apples", 500],
+      ["bananas", 300],
+      ["oranges", 200]
+    ]);
+    
+    document.getElementById("demo").innerHTML = fruits2.get("apples");
+    </script>
+    
+    <!--  -->
+    <input id="demo" type="text">
+    <button type="button" onclick="myFunction()">Test Input</button>
+    <p id="p01"></p>
+    
+    <script>
+        //8.ÖRNEK
+    //     İfade throw, özel bir hata oluşturmanıza olanak tanır.
+    // Teknik olarak bir istisna atabilirsiniz (bir hata atabilirsiniz) .
+    // İstisna bir JavaScript String, a Number, a Booleanveya bir olabilir Object:
+    // ve throw ile birlikte kullanırsanız , program akışını kontrol edebilir ve özel hata mesajları oluşturabilirsiniz.try catch
+    // Bu örnek girdiyi inceler. Değer yanlışsa, bir istisna (err) atılır.
+    // Özel durum (err), catch ifadesi tarafından yakalanır ve özel bir hata mesajı görüntülenir:
+    function myFunction() {
+      const message = document.getElementById("p01");
+      message.innerHTML = "";
+      let x = document.getElementById("demo").value;
+      try { 
+        if(x == "")  throw "empty";
+        if(isNaN(x)) throw "not a number";
+        x = Number(x);
+        if(x < 5)  throw "too low";
+        if(x > 10)   throw "too high";
+      }
+      catch(err) {
+        message.innerHTML = "Input is " + err;
+      }
+    }
+    </script>
+    
+    <!--  -->
+    <p id="demo"></p>
+    <script>
+         //9.ÖRNEK
+    let myFunction = (a, b) => a * b;
+    document.getElementById("demo").innerHTML = myFunction(4, 5);
+    </script>
+    
+    <!--  -->
+    <p id="demo"></p>
+    <script>
+        //9.ÖRNEK
+        // JavaScript Ok İşlevi
+        //ÖNCEKİ ÖRNEK
+    var hello;
+    hello = function() {
+      return "Hello World!";
+    }
+    document.getElementById("demo").innerHTML = hello();
+    </script>
+    <!--  -->
+    <p id="demo"></p>
+    <script>
+        //10.ÖRNEK
+        //OK LU İŞLEV 
+        //Arrow function
+    var hello;
+    
+    hello = () => {
+      return "Hello World!";
+    }
+    document.getElementById("demo").innerHTML = hello();
+    </script>
+</body>
+</html>

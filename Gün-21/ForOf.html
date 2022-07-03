@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<p id="demo"></p>
+<script>
+    //1.ÖRNEK
+    // Kısalıyor! İşlevin yalnızca bir ifadesi varsa ve ifade bir değer döndürürse, parantezleri ve anahtar kelimeyi kaldırabilirsiniz return:
+var hello;
+hello = () => "Hello World!";
+document.getElementById("demo").innerHTML = hello();
+</script>
+<!--  -->
+<p id="demo"></p>
+<script>
+     //2.ÖRNEK
+    //  Bir sınıfınız olduğunda, nesneleri oluşturmak için sınıfı kullanabilirsiniz:
+    // Yukarıdaki örnek, iki Car nesnesi oluşturmak için Car sınıfını kullanır .
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+}
+const myCar = new Car("Ford", 2014);
+document.getElementById("demo").innerHTML =
+myCar.name + " " + myCar.year;
+</script>
+<!--  -->
+<p id="demo"></p>
+<script>
+     //3.ÖRNEK
+//      Sınıf yöntemleri, nesne yöntemleriyle aynı sözdizimi ile oluşturulur.
+// class Bir sınıf oluşturmak için anahtar kelimeyi kullanın .
+// constructor()Her zaman bir yöntem ekleyin .
+// Ardından istediğiniz sayıda yöntem ekleyin.
+// Araba yaşını döndüren "yaş" adlı bir Sınıf yöntemi oluşturun:
+// Parametreleri Class yöntemlerine gönderebilirsiniz:
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  age() {
+    let date = new Date();
+    return date.getFullYear() - this.year;
+  }
+}
+
+let myCarr = new Car("Ford", 2014);
+document.getElementById("demo").innerHTML =
+"My car is " + myCarr.age() + " years old.";
+</script>
+<!--  -->
+
+<p id="demo"></p>
+<script>
+    //4.ÖRNEK
+//     JSON'un yaygın bir kullanımı, bir web sunucusundan veri okumak ve verileri bir web sayfasında görüntülemektir.
+// Basit olması için, bu, girdi olarak bir dize kullanılarak gösterilebilir.
+// İlk olarak, JSON sözdizimini içeren bir JavaScript dizesi oluşturun:
+// JSON.parse()Ardından, dizeyi bir JavaScript nesnesine dönüştürmek için yerleşik JavaScript işlevini kullanın:
+let text3 = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+const obj = JSON.parse(text3);
+document.getElementById("demo").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
+</script>
+
+
+<!--  -->
+<p id="demo"></p>
+<p>Debug açıkken, aşağıdaki kod üçüncü satırı çalıştırmadan önce çalışmayı durdurmalıdır.</p>
+<script>
+    //5.ÖRNEK
+//     Anahtar debuggersözcük, JavaScript'in yürütülmesini durdurur ve (varsa) hata ayıklama işlevini çağırır.
+// Bu, hata ayıklayıcıda bir kesme noktası ayarlamakla aynı işleve sahiptir.
+// Hata ayıklama yoksa, hata ayıklayıcı ifadesinin hiçbir etkisi yoktur.
+// Hata ayıklayıcı açıkken, bu kod üçüncü satırı çalıştırmadan önce çalışmayı durduracaktır.
+let x = 15 * 5;
+debugger;
+document.getElementById("demo").innerHTML = x;
+</script>
+<!--  -->
+
+
+<p id="demo"></p>
+<script>
+    //6.ÖRNEK
+    //Geçerli sayfanın href'ini (URL) görüntüleyin:
+document.getElementById("demo").innerHTML = 
+"The full URL of this page is:<br>" + window.location.href;
+</script>
+<!--  -->
+<p id="demo"></p>
+<script>
+    //7.ÖRNEK
+    // Ana bilgisayarın adını görüntüleyin:
+document.getElementById("demo").innerHTML = 
+"Page hostname is: " + window.location.hostname;
+</script>
+<!--  -->
+<p id="demo"></p>
+<script>
+     //8.ÖRNEK
+    //  Özellik window.location.pathname, geçerli sayfanın yol adını döndürür.
+document.getElementById("demo").innerHTML =
+"Page path is: " + window.location.pathname;
+</script>
+<!--  -->
+
+<input type="button" value="Yeni Belge Yükle" onclick="newDoc()">
+<script>
+       //9.ÖRNEK
+    //    Yöntem window.location.assign()yeni bir belge yükler.
+function newDoc() {
+  window.location.assign("https://www.w3schools.com")
+}
+</script>
+
+<!--  -->
+<button onclick="myFunction()">Tıklayınız</button>
+<p id="demo"></p>
+<script>
+     //10.ÖRNEK
+//      Onay Kutusu
+// Kullanıcının bir şeyi doğrulamasını veya kabul etmesini istiyorsanız, genellikle bir onay kutusu kullanılır.
+// Bir onay kutusu açıldığında, kullanıcının devam etmek için "Tamam" veya "İptal" düğmesine tıklaması gerekir.
+// Kullanıcı "Tamam"ı tıklarsa kutu true değerini döndürür . Kullanıcı "İptal"i tıklarsa kutu false döndürür .
+function myFunction() {
+  var txt;
+  if (confirm("Butona Tıklayınız!")) {
+    txt = "Tamama Tıkladınız!";
+  } else {
+    txt = "İptale Tıkladınız!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+<!--  -->
+
+<button onclick="myFunction()">Tıkla</button>
+<p id="demo"></p>
+<script>
+    //11.ÖRNEK
+//     İstem Kutusu
+// Kullanıcının bir sayfa girmeden önce bir değer girmesini istiyorsanız, genellikle bir bilgi istemi kutusu kullanılır.
+// Bir istem kutusu açıldığında, kullanıcının bir giriş değeri girdikten sonra devam etmek için "Tamam" veya "İptal"e tıklaması gerekir.
+// Kullanıcı "Tamam"ı tıklarsa kutu, giriş değerini döndürür. Kullanıcı "İptal"i tıklarsa kutu boş döner.
+// Sözdizimi
+// window.prompt("sometext","defaultText");
+// Yöntem window.prompt(), pencere öneki olmadan yazılabilir.
+function myFunction() {
+  let text;
+  let person = prompt("Lütfen Adınızı Giriniz:", "Emin");
+  if (person == null || person == "") {
+    text = "Kullanıcı İşlemi İptal etti";
+  } else {
+    text = "Merhaba " + person + "! Bugün Nasılsın";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+<!--  -->
+
+<p>Click "Try it". Wait 3 seconds, and the page will alert "Hello".</p>
+<button onclick="setTimeout(myFunction, 3000);">Try it</button>
+<script>
+    //12.ÖRNEK
+    // Bir düğmeyi tıklayın. 3 saniye bekleyin, sayfa "Merhaba" uyarısını verecektir:
+function myFunction() {
+  alert('Hello');
+}
+</script>
+<!--  -->
+
+<button onclick="myVar = setTimeout(myFunction, 3000)">Başlat</button>
+<button onclick="clearTimeout(myVar)">Durdur</button>
+<script>
+    //13.ÖRNEK
+//     İşlev henüz yürütülmediyse, clearTimeout() yöntemi çağırarak yürütmeyi durdurabilirsiniz:
+// Örnek
+// Yukarıdakiyle aynı örnek, ancak eklenmiş bir "Durdur" düğmesi ile:
+function myFunction() {
+  alert("Hello");
+}
+</script>
+
+</body>
+</html>
