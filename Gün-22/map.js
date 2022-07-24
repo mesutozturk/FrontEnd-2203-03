@@ -21,8 +21,11 @@ function initMap() {
     const mapDiv = document.getElementById("map");
     const map = new google.maps.Map(mapDiv, {
         center: konum,
-        zoom: 17
+        zoom: 17,
+        mapTypeId: "satellite",
     });
+
+    map.setTilt(45);
 
     const trafficLayer = new google.maps.TrafficLayer();
     trafficLayer.setMap(map);
